@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        type='text/css'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+    <script src="scripts/owl.carousel.min.js"></script>
+
+
+    <script src="scripts/header-menu.js"></script>
+
+
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="page-1">
+        <div class="container page-header p-3">
+            <div class="row text-center justify-content-between align-items-center px-2" style="font-size: 20px;">
+                <div class="d-flex">
+                    <i class="fa fa-thin fa-bars-staggered fa-rotate-180" id="pop-menu"></i>
+                </div>
+                <div class="d-flex">
+                    <img src="assets/images/icon.PNG" alt="" />
+                </div>
+                <div class="d-flex">
+                    <i class="fa  fa-magnifying-glass px-3"></i>
+                    <i class="fa fa-sharp fa-light fa-bag-shopping" onclick="openCart()"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container " style="height: 650px;">
+            <div class="row justify-content-center">
+                <div class="col-10">
+
+                    <div class="owl-carousel owl-theme" style="height: 400px !important; background-size: cover;">
+                        <img class="owl-lazy" data-src="assets/images/image.jpg" alt="">
+                        <img class="owl-lazy" data-src="assets/images/product.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container pb-5">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <h6>MOHAN</h6>
+                    <span class="text-secondary d-block">Recycle boucle knit Cardigan Pink</span>
+                    <span class="orange d-block">120$</span>
+                    <div class="row">
+                        <div class="col-5 pr-5 align-items-center">
+                            <div class="d-flex pt-2" id="main-page">
+                                <span style="height: 0;" class="pr-2">Color</span>
+                                <div class="black-circle mr-2 active-circle">
+                                    <div style="background-color: black;"></div>
+                                </div>
+                                <div class="black-circle mr-2">
+                                    <div style="background-color: #DD8560;"></div>
+                                </div>
+                                <div class="black-circle mr-2">
+                                    <div style="background-color: grey;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 pl-5 m-0 p-0 ">
+                            <div class="d-flex " style="align-items: start;" id="main-page">
+                                <span style="height: 0; " class="pr-2 pt-1">Size</span>
+                                <div class="size-circle mr-2 size-circle-active">
+                                    S
+                                </div>
+                                <div class="size-circle mr-2">
+                                    M
+                                </div>
+                                <div class="size-circle mr-2">
+                                    L
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-2 text-light" style="background-color: black;">
+                    <div class="basket-thing">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex py-3 px-2 align-items-center add-basket">
+                                <i class="fa-sharp fa-solid fa-plus pr-1"></i>
+                                <span>ADD TO BASKET</span>
+                            </div>
+                            <div class="d-flex py-3 px-2 align-items-center">
+                                <i class="fa-sharp fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amount d-none">
+                        <div class="d-flex py-3 align-items-center w-100">
+                            <div class="d-flex align-items-center w-100 justify-content-center">
+                            <div data="main-amount" class="circle control-subtract mr-3">-</div>
+                            <div id="main-amount" class="mr-3">1</div>
+                            <div data="main-amount" class="circle control-add">+</div>
+                        </div>
+                            <div class="d-flex ml-5 justify-content-end">
+                                <div class="circle" onclick="insertCart();"><i class="fa-solid fa-check"></i></div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container pt-4 menu-header d-none">
+                <div class="row" style="margin: 0; padding: 0">
+                    <div class="d-flex flex-column pl-3">
+                        <i class="fa-regular fa-x" id="exit"></i>
+                        <div class="d-flex pt-5 ">
+                            <span class="switch-menu active" menu-parent="women">WOMEN</span>
+                            <span class="switch-menu" menu-parent="men">MAN</span>
+                            <span class="switch-menu" menu-parent="kids">KIDS</span>
+                        </div>
+                        <hr />
+
+                        <div class="menu" menu="women">
+                            <div class="d-flex pt-4 px-0 flex-column women-menu">
+                                <div class="item" item-data="item-1">
+                                    <span>New</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+
+                                <div class="item-list d-none" item-parent="item-1">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>placeholder-new</span>
+                                        <span>placeholder-new</span>
+                                    </div>
+                                </div>
+
+                                <div class="item" item-data="item-2">
+                                    <span>Apparel</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+
+                                <div class="item-list d-none" item-parent="item-2">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>Outer</span>
+                                        <span>Dress</span>
+                                        <span>Blouse/shirt</span>
+                                        <span>T-shirt</span>
+                                        <span>Knitwear</span>
+                                        <span>Skirt</span>
+                                        <span>Pants</span>
+                                        <span>Denim</span>
+                                        <span>Kids</span>
+                                    </div>
+                                </div>
+
+                                <div class="item" item-data="item-3">
+                                    <span>Bag</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="item-list d-none" item-parent="item-3">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>placeholder-bag</span>
+                                        <span>placeholder-bag</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="item" item-data="item-4">
+                                    <span>Shoes</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="item-list d-none" item-parent="item-4">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>placeholder-shoe</span>
+                                        <span>placeholder-shoe</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="item" item-data="item-5">
+                                    <span>Beauty</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="item-list d-none" item-parent="item-5">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>placeholder-Beauty</span>
+                                        <span>placeholder-Beauty</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="item" item-data="item-6">
+                                    <span>Accessories</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="item-list d-none" item-parent="item-6">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>placeholder-Accessories</span>
+                                        <span>placeholder-Accessories</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="menu d-none" menu="men">
+                            <div class="d-flex pt-4 px-0 flex-column">
+                                <div class="item" item-data="item-1">
+                                    <span>New</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+
+                                <div class="item-list d-none" item-parent="item-1">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>placeholdermen-new</span>
+                                        <span>placeholder-new</span>
+                                    </div>
+                                </div>
+
+                                <div class="item" item-data="item-2">
+                                    <span>Apparel</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+
+                                <div class="item-list d-none" item-parent="item-2">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>Outer</span>
+                                        <span>Dress</span>
+                                        <span>Blouse/shirt</span>
+                                        <span>T-shirt</span>
+                                        <span>Knitwear</span>
+                                        <span>Skirt</span>
+                                        <span>Pants</span>
+                                        <span>Denim</span>
+                                        <span>Kids</span>
+                                    </div>
+                                </div>
+
+                                <div class="item" item-data="item-4">
+                                    <span>Shoes</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="item-list d-none" item-parent="item-4">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>placeholder-shoe</span>
+                                        <span>placeholder-shoe</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="menu d-none" menu="kids">
+                            <div class="d-flex pt-4 px-0 flex-column">
+
+                                <div class="item" item-data="item-4">
+                                    <span>Shoes-kids</span>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="item-list d-none" item-parent="item-4">
+                                    <div class="pl-3 d-flex flex-column">
+                                        <span>placeholder-shoe</span>
+                                        <span>placeholder-shoe</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart d-none">
+        <div class="container custom-con" id="cart-parent">
+            <div class="row p-3">
+                <div class="col-4">
+                    <i class="fa-regular fa-x" style="cursor: pointer;" onclick="closeCart()"></i>
+                    <h6 class="pt-3">CART</h6>
+
+                    </div>
+                </div>
+                <div id="addhere" class="container">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
